@@ -1,0 +1,93 @@
+@import "../../styles/variables.scss";
+
+.login-register-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login-register {
+    max-width: 450px;
+    width: 100%;
+    background-color: $bg-form;
+    border-radius: 10px;
+    box-shadow: 0 20px 20px rgba($black, 0.5);
+    padding: 50px;
+    animation-name: signAnim;
+    animation-duration: 0.3s;
+    transition: 0.3s;
+
+    @media (max-width: 550px) {
+      width: 80%;
+    }
+  }
+
+  h1 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: $text-color;
+    text-shadow: 0 2px 2px rgba($black, 0.25);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    input {
+      height: 40px;
+      padding: 10px;
+      border: 1px solid rgba($black, 0.1);
+      background-color: rgba($black, 0.03);
+      border-radius: 5px;
+      outline: none;
+      color: $text-color;
+      box-shadow: 0 1px 5px rgba($black, 0.1) inset;
+      font-size: 15px;
+
+      &::placeholder {
+        transition: 0.5s;
+      }
+
+      &:focus::placeholder {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+
+      &[type="submit"] {
+        background-color: $btn-blue;
+        color: $text-color-light;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: 0.3s;
+        box-shadow: 0 3px 3px rgba($black, 0.25);
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .link {
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 0 2px 2px rgba($black, 0.25);
+  }
+}
+
+@keyframes signAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -4,7 +4,8 @@
   "description": "soon",
   "main": "index.ts",
   "scripts": {
-    "server": "nodemon server/index.ts"
+    "server": "nodemon server/index.ts",
+    "client": "npm run dev --prefix client"
   },
   "repository": {
     "type": "git",
