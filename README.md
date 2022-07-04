@@ -1,2 +1,2 @@
 # atm-machine
-soon
+(Coming Soon)
